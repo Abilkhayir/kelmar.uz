@@ -1,0 +1,26 @@
+name = "kelajak-test-api"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Payme Business kabinetidagi kassa (merchant) ID
+PAYME_MERCHANT_ID = "PASTE_MERCHANT_ID"
+# Sinov uchun:  https://test.paycom.uz   Haqiqiy to'lov uchun: https://checkout.paycom.uz
+PAYME_CHECKOUT_URL = "https://test.paycom.uz"
+# Narx so'mda (tiyinga o'zi aylantiriladi)
+PRICE_UZS = "50000"
+# GitHub Pages manzilingiz (oxirida / belgisiz)
+ALLOWED_ORIGIN = "https://USERNAME.github.io"
+# To'lovdan keyin qaytiladigan sahifa
+SITE_URL = "https://USERNAME.github.io/REPO/"
+# Google Cloud'dan olingan OAuth Client ID
+GOOGLE_CLIENT_ID = "PASTE_GOOGLE_CLIENT_ID.apps.googleusercontent.com"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kelajak_test"
+database_id = "PASTE_D1_DATABASE_ID"
+
+# Maxfiy kalitlar kodga yozilmaydi, buyruq bilan qo'yiladi:
+#   npx wrangler secret put PAYME_KEY
+#   npx wrangler secret put SESSION_SECRET
